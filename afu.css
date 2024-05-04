@@ -1,0 +1,184 @@
+.WS {
+position: relative;
+  top: 150px;
+  left: 150px;
+  z-index: 100;
+  width: 1200px;
+  height: 318px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 15px 1px #7a7a7a;
+  background-color: white;
+ 
+}
+
+.ticket-type 
+{
+  margin-top: 50px;
+  font-size: 14px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+}
+
+.ticket-type span 
+{
+  margin-left: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.ticket-type span i 
+{
+  font-size: 14px;
+  color: rgb(18, 119, 226);
+}
+
+.selected 
+{
+  background-color: rgb(211, 211, 211);
+  border-radius: 30px;
+  padding: 3px 15px;
+}
+
+.selected::before 
+{
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.nn
+{
+  align-items: center;
+  margin-left: 50%;
+  color: #7a7a7a;
+}
+
+
+.flight-search 
+{
+  border: solid 1px #7a7a7a;
+  border-radius: 20px;
+  display: flex;
+  margin-top: 10px;
+}
+
+.flight 
+{
+  margin: 15px;
+  color: rgb(33, 32, 33);
+  width: 300px;
+  border-right: 1px solid rgb(218, 215, 215);
+}
+
+.flight h1 
+{
+  margin: 0;
+  color: black;
+}
+
+.others
+{
+  display: flex;
+  flex-direction: row;
+  color: rgb(129, 126, 126);
+  margin-top: 20px;
+  position: relative;
+}
+
+.others span i
+{
+  color: rgb(181, 238, 238);
+}
+
+.departure , .return
+{
+  border-right: 1px solid rgb(218, 215, 215);
+  margin: 10px
+}
+
+.arrows 
+{
+  color: rgb(135, 207, 240);
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.others span i
+{
+  color: aqua;
+}
+.fare-search 
+{
+  margin-top: 50px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fare-select 
+{
+  display: flex;
+  align-items: center;
+}
+
+.selected-fare-type 
+{
+  font-size: 14px;
+  color: rgb(81, 88, 95);
+  display: flex;
+}
+
+.dropdown-content 
+{
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  border: 1px solid black;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 120%;
+  left: 0;
+}
+
+.dropdown-content a 
+{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover 
+{
+  background-color: rgb(211, 211, 211);
+}
+
+.dropdown-toggle:hover .dropdown-content 
+{
+  display: block;
+}
+
+.dropdown-toggle::after 
+{
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translate
+}
+
+.h
+{
+  color: black;
+}
