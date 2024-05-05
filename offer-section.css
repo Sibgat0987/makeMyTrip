@@ -1,7 +1,7 @@
 .offer-section{
  background-color: white;
  width: 1200px;
- height: 318px;
+ height: 550px;
  padding: 15px;
  border-radius: 10px;
  box-shadow: 0px 1px 15px 1px #7a7a7a;
@@ -13,7 +13,7 @@
 .offer-header{
   height: 55px;
   width: 1200px;
-  
+  position: absolute;
 display: flex;
 flex-direction: row;
 border-bottom-width: 1px;
@@ -37,4 +37,63 @@ border-bottom-color: rgb(186, 180, 180);
   color: rgb(9, 118, 148);
   text-decoration: underline;
   cursor: pointer;
+}
+.booking-container{
+  width: 100%;
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.preview{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 100px 1fr ;
+  column-gap: 40px;
+ padding: 6px;
+ height: 200px;
+ width: 500px;
+  border-radius: 10px;
+ box-shadow: 0px 1px 15px 1px  rgb(186, 180, 180);;
+ background-color: white;
+
+ margin-left: 50px;
+}
+.thumbnail-row{
+width: 80px;
+}
+.info-grid{
+  
+ margin-left: 4px;
+
+}
+.info-offer{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+
+}
+.info-title{
+  font-size: 17px;
+}
+.tandc{
+  color: #7a7a7a;
+}
+.discount{
+  font-weight: bold;
+  font-size: 30px;
+}
+.underline{
+  color: red;
+  margin-bottom: 4px;
+}
+.offer-booking-text{
+  color: #7a7a7a;
+  font-size: 20px;
+}
+.book-now{
+  font-weight: bold;
+  color:  rgb(9, 118, 148);
+  font-size: 18px;
+ margin-top: 25px;
+  margin-left: 220px;
 }
