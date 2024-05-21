@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <style>
+        body{
+          overflow-x: hidden;
+          background-image:url("manali.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+        }
+       
+        .logInbox{
+          width: 500px;
+          box-shadow: 0px 1px 15px 1px #7a7a7a; 
+          margin: auto;
+          height: 200px;
+          margin-top: 100px;
+          position: absolute;
+          margin-left: 10px;
+        }
+        .Account-type{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          height: 50px;
+          width: 500px;
+          border-radius: 25px;
+          box-shadow: 0px 1px 15px 1px #7a7a7a;
+          align-items: center;
+          margin: auto;
+        }
+        .personal_acc{
+          border-radius: 25px;
+          margin-left: 20px;
+          font-size: 18px;
+          font-weight: bold;
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+        }
+        .mybiz-acc{
+          border-radius: 25px;
+          margin-left: 20px;
+          font-size: 18px;
+          font-weight: bold;
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          margin-right: 10px;
+        }
+        .personal_acc:hover{
+          background-color:white;
+          color: black;
+        }
+        .mybiz-acc:hover{
+          background-color:white;
+          color: black;
+        }
+        .mobile-num{
+          position: relative;
+          margin: auto;
+          align-items: center;
+          left: 36%;
+        }
+        .input-box{
+          display: inline-block;
+          width: 300px;
+          padding-left: 110px;
+          height: 50px;
+          border-width: 2px;
+          border-color: #7a7a7a;
+        }
+        .flag{
+          height: 30px;
+        margin-top: 10px;
+        position: absolute;
+        margin-left: 50px;
+        }
+        .number{
+          font-size: 20px;
+font-weight: bold;
+margin-top: 50px;
+margin-bottom: 10px;
+        }
+        #submit-button{
+  margin-top: 35px;
+  height: 50px;
+  width: 200px;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(28, 171, 233);
+  border-radius: 30px;
+  border: 0px;
+  position: absolute;
+        }
+        .button-container{
+          top: 50%;
+          position: relative;
+          left: 7%;
+        }
+        .popup{
+          width: 400px;
+          background: #fff;
+          border-radius: 6px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%) scale(0.1);
+          text-align: center;
+          padding: 0 30px 60px;
+          color: #333;
+          visibility: hidden;
+          margin-top: 350px;
+          margin-left: 210px;
+        }
+        .open-popup{
+          visibility: visible;
+          top: 50%;
+          transform: translate(-50%,-50%) scale(1);
+        }
+        .popup img{
+          width: 100px;
+          margin-top: -50px;
+          border-radius: 50%;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .popup h2{
+          font-size: 38px;
+          font-weight: 500;
+          margin: 30px 0 10px;
+        }
+        .popup button{
+          width: 100%;
+          margin-top: 50px;
+          padding: 10px 0;
+          background-color: #e02189;
+          color: #FFF;
+          border: 0;
+          outline: none;
+          font-size: 18px;
+          border-radius: 4px;
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+
+        }
+      </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="Account-type">
+        <div class="personal_acc"> PERSONAL ACCOUNT </div>
+        <div class="mybiz-acc">MYBIZ ACCOUNT</div>
+      </div>
+      <center class="number"> Mobile Number</center>
+      <div class="mobile-num">
+        <img class="flag" src="Flag_of_India.svg.webp">
+        <input class="input-box" id="input-box" type="tel" placeholder="ENTER MOBILE NUMBER">
+        <div class="button-container">
+          <button id="submit-button" type="submit" onclick="openPopup()">SUBMIT</button>
+        </div>
+        <div class="popup" id="popup">
+          <img src="tick.png" alt="">
+          <h2>THANK YOU</h2>
+          <p>Your Details has been sucessfully submitted</p>
+          <button type="button" id="ok-button" onclick="closePopup()">OK</button>
+        </div>
+      </div>
+      </div>
+      
+    <script>
+      let inputEl=document.getElementsByClassName('input-box')[0];
+      let submitEl=document.getElementById('submit-button');
+      let okEl=document.getElementById('ok-button');
+      let popupEl=document.getElementById('popup');
+      
+      function openPopup(){
+        console.log("clicked")
+       let phone_numb=document.getElementById('input-box').value;
+       if (!phone_numb) {
+                alert('phone number is required!');
+                return;
+            }
+            else if (phone_numb.toString().length >10 ) {
+              alert('enter a valid phone number')
+            }
+else{
+            const user = {
+                phone_numb:phone_numb
+              
+          };
+
+            // Save user to localStorage
+            localStorage.setItem('user', JSON.stringify(user));
+            alert('Account created successfully!');
+            popupEl.classList.add('open-popup')
+
+            document.getElementById('input-box').reset();
+
+      }
+    }
+     function closePopup(){
+        popupEl.classList.remove('open-popup')
+      }
+    </script>
+  </body>
+</html>
