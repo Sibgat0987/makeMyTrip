@@ -1,0 +1,107 @@
+.blue-container
+{
+  color: rgb(215, 215, 16);
+  font-size: large;
+  background: rgb(7, 69, 140);
+  height: 50px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.bg
+{
+  width: 100%;
+}
+
+.flash
+{
+  height: 40px;
+}
+
+.vehicles
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 70px;
+}
+
+.V-BUTTON
+{
+  color: rgb(52, 52, 225);
+  font-weight: bold;
+  margin-left: 150px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  border-style: hidden;
+  background-color: rgb(194, 223, 227);
+  margin-bottom: 20px;
+}
+
+.text
+{
+  padding: 20px;
+  font-size: medium;
+  margin-left: 200px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  background-color:rgb(38, 53, 110);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.t
+{
+  font-size: large;
+  font-weight: bold;
+  align-items: center;
+  margin-left: 100px;
+  margin-bottom: 40px;
+}
+
+
+.p-box
+ {
+  background: linear-gradient(45deg, #ef1b70, #bb667a, #ff69b4);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 1.2em;
+  border: 2px solid #ef1b70;
+  animation: metallic-shine 2s infinite;
+  margin: 40px;
+}
+
+@keyframes p-box 
+{
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}
