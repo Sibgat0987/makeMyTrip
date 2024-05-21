@@ -181,7 +181,7 @@ margin-bottom: 10px;
                 alert('phone number is required!');
                 return;
             }
-            else if (phone_numb.toString().length >10 ) {
+            else if (phone_numb.toString().length >10  || phone_numb.toString().length <10 ) {
               alert('enter a valid phone number')
             }
 else{
